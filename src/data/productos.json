@@ -1,0 +1,98 @@
+[
+  {
+    "id": 4,
+    "code": "4",
+    "title": "Producto 4",
+    "description": "Descript Producto 4",
+    "price": 9999,
+    "thumbnail": "https://google.com",
+    "stock": 12
+  },
+  {
+    "id": 5,
+    "code": "190",
+    "title": "Producto 4",
+    "description": "Descript Producto 4",
+    "price": 9999,
+    "thumbnail": "https://google.com",
+    "stock": 12,
+    "status": true,
+    "category": "categoria 1"
+  },
+  {
+    "id": 6,
+    "code": "12343",
+    "title": "Producto 4",
+    "description": "Descript Producto 4",
+    "price": 9999,
+    "thumbnail": "https://google.com",
+    "stock": 12,
+    "status": true,
+    "category": "categoria 1"
+  },
+  {
+    "id": 7,
+    "code": "32432",
+    "title": "Producto 4",
+    "description": "Descript Producto 4",
+    "price": 9999,
+    "thumbnail": "https://google.com",
+    "stock": 12,
+    "status": true,
+    "category": "categoria 1"
+  },
+  {
+    "id": 8,
+    "code": "4322",
+    "title": "Producto 4",
+    "description": "Descript Producto 4",
+    "price": 9999,
+    "thumbnail": "https://google.com",
+    "stock": 12,
+    "status": false,
+    "category": "categoria 1"
+  },
+  {
+    "id": 9,
+    "code": "42353322",
+    "title": "Producto 4",
+    "description": "Descript Producto 4",
+    "price": 9999,
+    "thumbnail": "https://google.com",
+    "stock": 12,
+    "status": true,
+    "category": "categoria 1"
+  },
+  {
+    "id": 10,
+    "code": "42353543322",
+    "title": "Producto 4",
+    "description": "Descript Producto 4",
+    "price": 9999,
+    "thumbnail": "https://google.com",
+    "stock": 12,
+    "status": true,
+    "category": "categoria 1"
+  },
+  {
+    "id": 11,
+    "code": "765634",
+    "title": "Producto 4",
+    "description": "Descript Producto 4",
+    "price": 9999,
+    "thumbnail": "https://google.com",
+    "stock": 12,
+    "status": true,
+    "category": "categoria 1"
+  },
+  {
+    "id": 2,
+    "code": "190",
+    "title": "Producto 4",
+    "description": "Descript Producto 4",
+    "price": 9999,
+    "thumbnail": "https://google.com",
+    "stock": 0,
+    "status": false
+  }
+]
