@@ -21,19 +21,29 @@ class CartManager {
         await fs.writeFile(this.filepath, data)
       }
 
-    async addCart(pid, quantity){
+      async addCart(){
+        console.log('entró')
         await this.#readFile()
         const cid = this.#carts.length  ? Math.max(...this.#carts.map(prd => prd.id)) + 1 : 1
-        const prd = {'id': parseInt(pid), 'quantity':quantity}
         const cart = {'id': parseInt(cid), products:[]} 
-        console.log(cart.products.length)
-        cart.products.push(prd)
 
         this.#carts.push(cart)
         this.#writeFile()
-        return cart
-        
+        return await this.getCartById(cid) 
     }
+
+    // async addCart(pid, quantity){
+    //     await this.#readFile()
+    //     const cid = this.#carts.length  ? Math.max(...this.#carts.map(prd => prd.id)) + 1 : 1
+    //     const prd = {'id': parseInt(pid), 'quantity':quantity}
+    //     const cart = {'id': parseInt(cid), products:[]} 
+    //     console.log(cart.products.length)
+    //     cart.products.push(prd)
+
+    //     this.#carts.push(cart)
+    //     this.#writeFile()
+    //     return cart 
+    // }
 
     async getCartById(cid){
         await this.#readFile()
@@ -62,7 +72,7 @@ class CartManager {
             this.#writeFile()
             return cart
         }  else {
-            const newProd = {'id': parseInt(pid), 'quantity': quantity}
+            const newProd = {'id': parseInt(pid), quantity:1}
             cart.products.push(newProd)
             cartNew.push(cart)
             console.log(cartNew)
@@ -71,24 +81,6 @@ class CartManager {
             return cart
         }
 
-        // const prodsCart = cart.products.filter(prd => prd.id != pid)
-        // console.log(prodsCart)
-        // const prd = cart.products.find(prd => prd.id == pid)
-        // if(prd){
-        //     prd.quantity = prd.quantity+ quantity
-        //     prodsCart.push(prd)
-        //     console.log(cartNew)
-        //     console.log(prodsCart)
-        //     cart.products.push(prodsCart)
-        //     cartNew.push(cart)
-        //     console.log(cartNew)
-        // }else{
-        //     cart.products.push({'id': parseInt(pid), 'quantity': quantity})
-        //     console.log(cart)
-        //     console.log('cartNew')
-
-        //     console.log(cartNew)
-        // }
     }
 }
 

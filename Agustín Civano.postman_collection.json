@@ -11,7 +11,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/carts/6",
+					"raw": "http://localhost:8080/api/carts/20",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -20,7 +20,7 @@
 					"path": [
 						"api",
 						"carts",
-						"6"
+						"20"
 					]
 				}
 			},
@@ -39,10 +39,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    quantity:100\r\n}"
+					"raw": ""
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/carts/9/product/9",
+					"raw": "http://localhost:8080/api/carts/20/product/4",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -51,9 +51,9 @@
 					"path": [
 						"api",
 						"carts",
-						"9",
+						"20",
 						"product",
-						"9"
+						"4"
 					]
 				}
 			},
@@ -65,7 +65,7 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/api/carts/products/2",
+					"raw": "http://localhost:8080/api/carts/",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -74,8 +74,7 @@
 					"path": [
 						"api",
 						"carts",
-						"products",
-						"2"
+						""
 					]
 				}
 			},

@@ -7,6 +7,12 @@ const router = Router()
 const cartManager = new CartManager('carrito.json')
 const productManager = new ProductManager('productos.json')
 
+router.post('/' , async(req, res)=>{
+  
+  const response = await cartManager.addCart()
+  console.log(response)
+  res.status(200).json(response)
+})
 
 
 router.post('/:cid/product/:pid', async (req, res) => {
@@ -14,33 +20,20 @@ router.post('/:cid/product/:pid', async (req, res) => {
   const pid = req.params.pid
   const existCart = await cartManager.getCartById(cid)
   const existPrd = await productManager.getProductById(pid)
-  const { quantity } = req.query
+  const quantity = 1 
   if(!existPrd){
     res.status(404).json({ error: `The product with the id ${pid} was not found` }) 
     return
   }
   
   if(existCart){
-    const update = await cartManager.upda/node_modulesteCart(cid, pid,parseInt(quantity))
+    const update = await cartManager.updateCart(cid, pid,parseInt(quantity))
     res.status(200).json(update)
     return
   }else{
     res.status(404).json({ error: `The cart with the id ${cid} was not found` }) 
     return
   }
-
-})
-
-router.post('/product/:pid', async (req, res) => {
-  const pid = req.params.pid
-  const existPrd = await productManager.getProductById(pid)
-  const quantity = 1
-  if(!existPrd){
-    res.status(404).json({ error: `The product with the id ${pid} was not found` }) 
-    return
-  }
-  const cart = await cartManager.addCart(pid,quantity)
-  res.status(200).json(cart)
 
 })
 
